@@ -6,7 +6,7 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import { BrowserRouter } from 'react-router-dom'
 import AuthProvider from './providers/AuthProvider.tsx'
 
-const PUBLISHABLE_KEY = "pk_test_YWJvdmUtZmVycmV0LTExLmNsZXJrLmFjY291bnRzLmRldiQ"
+const PUBLISHABLE_KEY = "pk_test_YWJvdmUtZmVycmV0LTExLmNsZXJrLmFjY291bnRzLmRldiQ";
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")

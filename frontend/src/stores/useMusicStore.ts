@@ -61,7 +61,7 @@ export const useMusicStore = create<MusicStore>((set) => ({
 	deleteAlbum: async (id) => {
 		set({ isLoading: true, error: null });
 		try {
-			await axiosInstance.delete(`/admin/albums/${id}`);
+			await axiosInstance.delete(`/admin/album/${id}`);
 			set((state) => ({
 				albums: state.albums.filter((album) => album._id !== id),
 				songs: state.songs.map((song) =>
@@ -104,7 +104,7 @@ export const useMusicStore = create<MusicStore>((set) => ({
 		set({ isLoading: true, error: null });
 
 		try {
-			const response = await axiosInstance.get("/albums");
+			const response = await axiosInstance.get("/album");
 			set({ albums: response.data });
 		} catch (error: any) {
 			set({ error: error.response.data.message });
